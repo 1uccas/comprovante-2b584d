@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comprovante de Pagamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="loading">
+            <div class="spinner"></div>
+            <div class="message">Carregando comprovante de pagamento...</div>
+        </div>
+        <div id="error" class="error">
+            <div class="error-text">
+                Ocorreu um erro ao carregar o comprovante.<br>
+                Tente novamente mais tarde.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Vercel Sistema de Pagamentos - Todos os direitos reservados.
+    </footer>
+
+    <script>
+        setTimeout(() => {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('error').style.display = 'flex';
+        }, 10000);
+    </script>
+</body>
+<script src="comprovante-vercel.js"></script>
+
+</html>
